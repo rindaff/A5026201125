@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
+@extends('layout.bahagia')
 
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
+@section('title', 'Menambah Pegawai')
+
+
+@section('judulhalaman', 'Menambah Data Pegawai')
+
+
+@section('konten')
+
 	<h3>Data Pegawai</h3>
 
-	<a href="/pegawai"> Kembali</a>
 
 	<br/>
 	<br/>
@@ -19,8 +20,8 @@
 		Jabatan <input type="text" name="jabatan" required="required"> <br/>
 		Umur <input type="number" name="umur" required="required"> <br/>
 		Alamat <textarea name="alamat" required="required"></textarea> <br/>
-		<input type="submit" value="Simpan Data">
+		<p><input type="submit" class="btn btn-success" value="Simpan Data"></p>
+        <p> <a href="/pegawai" class = "btn btn-warning"> Kembali</a></p>
 	</form>
 
-</body>
-</html>
+@endsection

@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Factorial</title>
-    <body>
-        <?php
-    $n1=$_POST['n1'];
-echo "<form method=POST action=''>
-<input type=text name=n1 value='$n1'>
-<input type=submit value=Submit>
-</form>";
-$factorial=1;
-for ($i=1; $i<=$n1;$i++){
-	$factorial=$factorial*$i;
-}
+<title>Factorial</title>
+<body>
+    <h2> Input Number </h2>
+    <form method=POST action='tugasphp'>
+        @csrf
+        <input type=text name=n1>
+        <input type=submit value=Submit>
+    </form>
 
-echo "Factorial of $n1 : $factorial";
-?>
+    @if(session('hasil'))
+    <div>{{session('hasil')}}</div>
+    @endif
+
 </body>
 </html>

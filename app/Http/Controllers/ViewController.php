@@ -12,8 +12,20 @@ class ViewController extends Controller
     {
         return view('etsweb');
     }
-    function convertfunc(Request $request)
+    function showConvert()
     {
         return view('convertweb');
+
+    }
+
+    function calcFactorial(Request $request)
+    {
+        $bil = $request->n1;
+        $factorial=1;
+        for ($i=1; $i<=$bil;$i++){
+            $factorial = $factorial * $i;
+        }
+
+        return redirect('tugasphp')->with('hasil', 'Factorial of '.$bil. ' : ' .$factorial);
     }
 }

@@ -22,7 +22,8 @@ Route::get('praktikum2', function () {
     return view('prak2web');
 });
 Route::get('ets', 'ViewController@showEts');
-Route::post('convert', 'ViewController@convertfunc');
+Route::get('tugasphp', 'ViewController@showConvert');
+Route::post('tugasphp', 'ViewController@calcFactorial');
 
 //route CRUD
 Route::get('/pegawai','PegawaiController@index');
@@ -33,8 +34,8 @@ Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
 
 //route CRUD
-Route::get('/absen','AbsenController@index');
-Route::get('/absen/tambah','AbsenController@tambah');
+Route::get('/absen','AbsenController@indexabsen');
+Route::get('/absen/add','AbsenController@add');
 Route::post('/absen/store','AbsenController@store');
 Route::get('/absen/edit/{id}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');
