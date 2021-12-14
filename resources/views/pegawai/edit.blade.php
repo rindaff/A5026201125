@@ -7,11 +7,6 @@
 <body>
 
 
-
-
-	<br/>
-	<br/>
-
 	@foreach($pegawai as $p)
 	<form action="/pegawai/update" method="post">
 		{{ csrf_field() }}

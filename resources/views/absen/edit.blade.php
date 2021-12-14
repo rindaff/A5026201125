@@ -6,7 +6,7 @@
 
    @section('konten')
 
-<h3>{{ $judul }}</h3>
+
 	@foreach($absen as $a)
 	<form action="/absen/update" method="post">
 		{{ csrf_field() }}
@@ -46,5 +46,6 @@
                 <label for="javascript">Alpha</label>
                 <p><input type="submit" class="btn btn-success" value="Simpan Data"></p>
                 <p> <a href="/absen" class = "btn btn-warning"> Kembali</a></p>
+            </form>
 @endforeach
 @endsection

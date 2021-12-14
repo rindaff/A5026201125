@@ -14,7 +14,7 @@
 	<table border="1" class = "table table-striped">
 		<tr>
 
-			<th>IDPegawai</th>
+			<th>Nama Pegawai</th>
 			<th>Tanggal</th>
 			<th>Status</th>
 			<th>Opsi</th>
@@ -22,22 +22,25 @@
 		@foreach($absen as $a)
 		<tr>
 
-			<td>{{ $a->IDPegawai }}</td>
+			<td>{{ $a->pegawai_nama }}</td>
 			<td>{{ $a->Tanggal }}</td>
 			<td>{{ $a->Status }}</td>
 			<td>
 				<a href="/absen/edit/{{ $a->ID}}">Edit Absensi</a>
 				|
-				<a href="/absen/hapus/{{ $a->ID }}">Delete Absensi</a>
+				<a href="/absen/hapus/{{ $a->ID }}">Hapus Absensi</a>
 			</td>
 		</tr>
 		@endforeach
 	</table>
+
+
     <p>
         Keterangan Status: <br>
         I : Izin <br>
         S : Sakit <br>
         A : Alpha <br>
-        </p>
+    </p>
+        {{ $absen ->links() }}
 
 @endsection

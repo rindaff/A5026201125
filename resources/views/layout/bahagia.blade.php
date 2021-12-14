@@ -25,6 +25,14 @@
         background-color: rgb(13, 23, 65);
         color: rgb(255, 255, 255)
     }
+    .bigbox {
+        background: -webkit-linear-gradient(bottom, #dac3d6, #c7d6f1);
+        background-repeat: repeat;
+        padding: 10px;
+        height: auto;
+        margin: 6rem auto 8.1rem auto;
+        margin-top: 20px;
+    }
     .footer {
         position: fixed;
         left: 0;
@@ -57,8 +65,8 @@
     </div>
 
     <div class="row">
-        <div class="col-sm-3">
-            <h3> Menu </h3>
+        <div class="col-sm-2">
+            <h3 style="text-align: center"> Menu </h3>
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="btn btn-primary" href="/pegawai">Pegawai</a>
@@ -67,7 +75,7 @@
                 <a class="btn btn-primary" href="/absen">Absen</a>
             </li><br>
             <li>
-                <a class="btn btn-primary" href="#">Minggu Depan</a>
+                <a class="btn btn-primary" href="/bedak">Bedak</a>
             </li><br>
             <li>
                 <a class="btn btn-primary" href="#">Praktikum</a>
@@ -75,11 +83,14 @@
         </ul>
     </div>
 
-    <div class="col-sm-9">
+    <div class="col-sm-10">
+        <div class="bigbox">
     <h3>@yield('judulhalaman')</h3>
 
     @section('konten')
-
+    </div>
+    </div>
+    </div>
     @show
     </div>
     <div class="footer">
