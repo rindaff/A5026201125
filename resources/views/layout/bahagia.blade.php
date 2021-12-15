@@ -80,6 +80,9 @@
             <li>
                 <a class="btn btn-primary" href="#">Praktikum</a>
             </li><br>
+            <li>
+                <a class="btn btn-primary" href="/karyawan1">EAS</a>
+            </li><br>
         </ul>
     </div>
 
