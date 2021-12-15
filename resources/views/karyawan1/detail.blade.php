@@ -26,7 +26,7 @@
     </div>
     <div>
         <label for="Gaji">Gaji</label></b>
-        <p>{{ number_format($k->Gaji, 0, ',', '.') }}
+        <p>{{ number_format($b->Gaji, 0, ',', '.') }}
         <p>
     </div>
 

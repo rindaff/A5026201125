@@ -15,12 +15,12 @@
 			<th>Pangkat</th>
 			<th>Gaji</th>
     </tr>
-    @foreach($karyawan as $b)
+    @foreach($karyawan1 as $b)
     <tr>
         <td>{{ $b->NIP }}</td>
 			<td>{{ $b->Nama }}</td>
 			<td>{{ $b->Pangkat }}</td>
-			<td>{{ $b->Gaji }}</td>
+			<td>{{ number_format($b->Gaji, 0, ',', '.') }}}</td>
         <td>
             <a href="/karyawan1/view/{{ $b->NIP }}">View Detail</a>
                 |
