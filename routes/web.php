@@ -52,3 +52,9 @@ Route::post('/bedak/update', 'BedakController@update');
 Route::get('/bedak/hapus/{id}', 'BedakController@hapus');
 Route::get('/bedak/cari','BedakController@cari');
 Route::get('/bedak/view/{id}','BedakController@detail');
+
+//route CRUD Karyawan
+Route::get('/karyawan1', 'karyawan1Controller@index');
+Route::get('/karyawan1/edit/{id}', 'karyawan1Controller@edit');
+Route::post('/karyawan1/update', 'karyawan1Controller@update');
+Route::get('/karyawan1/view/{id}','karyawan1Controller@detail');
